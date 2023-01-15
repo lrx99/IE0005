@@ -17,10 +17,18 @@ for y in c&d:
     print(y)
 
 #Q3
-offender = {'alice@wonderland.co.uk'}
+offender = set()
+print('Press . to end \nOffenders: ')
 
+while True:
+  off = input('')
+  offender.add(off)
+  if off == '.':
+    offender.remove('.')
+    break
+#print(offender)
 for z in offender-d:
     blocklist.write('\n' + z)
-
+    
 blocklist.close()
 visitors.close()
